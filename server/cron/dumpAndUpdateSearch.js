@@ -3,7 +3,7 @@ const client = require('../elasticsearch');
 const mw = require('../config/middleware');
 const CronJob = require('cron').CronJob;
 
-var hardUpdate = new CronJob('0 * * * * *',  () => {
+var hardUpdate = new CronJob('15 * * * * *',  () => {
   console.log('cron task activated');
   utils.clearAllDocuments()
   .then(() => {
